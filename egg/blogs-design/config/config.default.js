@@ -37,6 +37,16 @@ module.exports = appInfo => {
     },
   };
 
+  config.security = {
+    csrf: {
+      enable: false,
+    },
+  };
+
+  config.cors = {
+    origin: '*',
+  };
+
   return {
     ...config,
     ...userConfig,
