@@ -47,6 +47,12 @@ module.exports = appInfo => {
     origin: '*',
   };
 
+  config.jwt = {
+    // 使用 command+shift+p -> uuid 命令生成
+    secret: 'eaba440c-fab6-4c99-8cd7-d294f2cef196',
+    expiresIn: '4h',
+  };
+
   return {
     ...config,
     ...userConfig,

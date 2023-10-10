@@ -10,4 +10,6 @@ module.exports = app => {
 
   // 用户注册
   router.post('/user/signup', controller.user.signup);
+  // 用户登录
+  router.post('/user/login', controller.user.login);
 };
