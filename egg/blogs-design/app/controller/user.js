@@ -2,7 +2,7 @@
 
 const { Controller } = require('egg');
 
-class HomeController extends Controller {
+class UserController extends Controller {
   async signup() {
     const { ctx } = this;
     const body = this.ctx.request.body;
@@ -76,4 +76,4 @@ class HomeController extends Controller {
   }
 }
 
-module.exports = HomeController;
+module.exports = UserController;

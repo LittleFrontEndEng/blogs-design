@@ -9,7 +9,7 @@ const LayoutAside = (props: any) => {
   useEffect(() => {
     setDefaultRoute(window.location.pathname);
   }, []);
-  const items: any[] = routeInfo?.map((item: any, index: number) => {
+  const items: any[] = routeInfo?.filter((item: any) => !item.hide)?.map((item: any, index: number) => {
     return {
       label: item.name,
       key: item.path,

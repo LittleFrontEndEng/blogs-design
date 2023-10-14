@@ -12,4 +12,8 @@ module.exports = app => {
   router.post('/user/signup', controller.user.signup);
   // 用户登录
   router.post('/user/login', controller.user.login);
+
+
+  // 新建文章
+  router.post('/article/creation', controller.article.createFile);
 };
