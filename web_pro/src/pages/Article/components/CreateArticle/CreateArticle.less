@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 16px;
+
+  .editBox{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .content {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  }
+
+  .previewBox {
+    flex: 1;
+    background-color: #fff;
+    padding: 16px;
+    margin-left: 16px;
+    border: 1px solid #ccc;
+  }
+}
