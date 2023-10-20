@@ -34,5 +34,5 @@ module.exports = app => {
     },
   });
 
-  return mongoose.model('User', articleSchema);
+  return mongoose.model('Article', articleSchema);
 };

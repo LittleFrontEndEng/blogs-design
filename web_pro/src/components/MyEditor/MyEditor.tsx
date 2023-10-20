@@ -2,8 +2,9 @@ import '@wangeditor/editor/dist/css/style.css' // 引入 css
 
 import React, { useState, useEffect } from 'react'
 import { Editor, Toolbar } from '@wangeditor/editor-for-react'
+import uploadFile from '@/utils/up-oss'
 import { IDomEditor, IEditorConfig, IToolbarConfig } from '@wangeditor/editor'
-
+type InsertFnType = (url: string, alt: string, href: string) => void
 function MyEditor(props: any) {
   const { getHtml, setValue, title } = props;
   // editor 实例
@@ -31,10 +32,18 @@ function MyEditor(props: any) {
     placeholder: '请输入内容...',
     MENU_CONF: {
       uploadImage: {
-        server: '/api/upload-image',
         fieldName: 'custom-field-name',
-        // 继续写其他配置...
+        allowedFileTypes: ['image/*'],
         withCredentials: true,
+
+        async customUpload(file: File, insertFn: InsertFnType) {  // TS 语法
+          uploadFile(file, 'title', (percent: number, url: string) => {
+            if (url) {
+              let filename = decodeURI(url).split('/')[4].split('_')[1];
+              insertFn(url, filename, url)
+            }
+          })
+        }
       }
     }
   }

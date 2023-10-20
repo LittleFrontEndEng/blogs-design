@@ -16,4 +16,5 @@ module.exports = app => {
 
   // 新建文章
   router.post('/article/creation', controller.article.createFile);
+
 };

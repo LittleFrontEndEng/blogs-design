@@ -6,6 +6,10 @@ import styles from './CreateArticle.less'
 const CreateArticle = () => {
   const [html, setHtml] = useState('<p>hello</p>');
   const [title, setTitle] = useState('')
+  const [cover, setCover] = useState({
+    fileName: '',
+    url: '',
+  })
   useEffect(() => {
     // console.log('编辑器', editor);
   })
@@ -18,12 +22,19 @@ const CreateArticle = () => {
     // console.log(e.target.value);
     setTitle('<h2>' + e.target.value + '</h2>');
   }
+
+  const getFile = (fileName: string, url: string) => {
+    setCover({
+      fileName,
+      url,
+    })
+  }
   return (
     <div className={styles.container}>
       <div className={styles.articleTitle}>
         <div className={styles.left}>
-          文章封面：<UploadFile />
-          <span style={{marginLeft: 16}}>{'文件名'}</span>
+          文章封面：<UploadFile getFile={getFile}/>
+          <span style={{marginLeft: 16}}>{cover.fileName}</span>
         </div>
         <div className={styles.right}>
           <Button style={{marginRight: 16}}>取消</Button>
@@ -32,7 +43,7 @@ const CreateArticle = () => {
       </div>
       <div className={styles.create}>
         <div className={styles.editBox}>
-          <MyEditor title={title} setValue='<p>123</p>' getHtml={getHtml}/>
+          <MyEditor title={title} setValue='' getHtml={getHtml}/>
         </div>
         <div className={styles.previewBox}>
           <div style={{ marginTop: '15px' }} dangerouslySetInnerHTML={{__html: html}}></div>
