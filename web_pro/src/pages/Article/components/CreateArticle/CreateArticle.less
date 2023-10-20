@@ -1,28 +1,49 @@
 .container {
   width: 100%;
   height: 100%;
-  display: flex;
   padding: 16px;
 
-  .editBox{
-    width: 50%;
-    height: 100%;
+  .articleTitle {
+    height: 60px;
+    background-color: #fff;
     display: flex;
-    flex-direction: column;
-    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 0 16px;
 
-    .content {
-      position: absolute;
-      top: 10px;
-      left: 10px;
+    .left {
+      display: flex;
+      align-items: center;
+      width: 600px;
+      white-space: nowrap;
     }
   }
 
-  .previewBox {
-    flex: 1;
-    background-color: #fff;
-    padding: 16px;
-    margin-left: 16px;
-    border: 1px solid #ccc;
+  .create {
+    display: flex;
+
+    .editBox{
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .content {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    .previewBox {
+      flex: 1;
+      background-color: #fff;
+      padding: 16px;
+      margin-left: 16px;
+      border: 1px solid #ccc;
+    }
   }
+
 }

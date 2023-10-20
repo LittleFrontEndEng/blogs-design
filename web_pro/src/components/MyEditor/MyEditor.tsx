@@ -6,27 +6,38 @@ import { IDomEditor, IEditorConfig, IToolbarConfig } from '@wangeditor/editor'
 
 function MyEditor(props: any) {
   const { getHtml, setValue, title } = props;
-    // editor 实例
-    const [editor, setEditor] = useState<IDomEditor | null>(null)   // TS 语法
-    // const [editor, setEditor] = useState(null)                   // JS 语法
+  // editor 实例
+  const [editor, setEditor] = useState<IDomEditor | null>(null)   // TS 语法
+  // const [editor, setEditor] = useState(null)                   // JS 语法
 
-    // 编辑器内容
-    const [html, setHtml] = useState('')
+  // 编辑器内容
+  const [html, setHtml] = useState('')
 
-    // 模拟 ajax 请求，异步设置 html
-    useEffect(() => {
-      setHtml(title + setValue)
-    }, [setValue])
+  useEffect(() => {
+    updateHtml();
+  }, [title, setValue])
 
-    // 工具栏配置
-    const toolbarConfig: Partial<IToolbarConfig> = { }  // TS 语法
-    // const toolbarConfig = { }                        // JS 语法
+  const updateHtml = () => {
+    setHtml(title + setValue)
+  }
 
-    // 编辑器配置
-    const editorConfig: Partial<IEditorConfig> = {    // TS 语法
-    // const editorConfig = {                         // JS 语法
-        placeholder: '请输入内容...',
+  // 工具栏配置
+  const toolbarConfig: Partial<IToolbarConfig> = { }  // TS 语法
+  // const toolbarConfig = { }                        // JS 语法
+
+  // 编辑器配置
+  const editorConfig: Partial<IEditorConfig> = {    // TS 语法
+  // const editorConfig = {                         // JS 语法
+    placeholder: '请输入内容...',
+    MENU_CONF: {
+      uploadImage: {
+        server: '/api/upload-image',
+        fieldName: 'custom-field-name',
+        // 继续写其他配置...
+        withCredentials: true,
+      }
     }
+  }
 
     // 及时销毁 editor ，重要！
     useEffect(() => {
