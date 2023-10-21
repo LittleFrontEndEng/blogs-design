@@ -49,8 +49,8 @@ const Login = () => {
     };
     const result = await signin(query) as any;
     if (result.success) {
-      window.localStorage.setItem('userInfo', JSON.stringify(result.user));
-      window.localStorage.setItem('token', result.user.token);
+      window.sessionStorage.setItem('userInfo', JSON.stringify(result.user));
+      window.sessionStorage.setItem('token', result.user.token);
       history.push({
         pathname: '/home',
         // query: {

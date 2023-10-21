@@ -4,7 +4,7 @@ import styles from './LayoutHeader.less'
 const LayoutHeader = (props: any) => {
   console.log('头部信息', props);
   
-  const userInfo = JSON.parse(window.localStorage.getItem('userInfo') || 'null') || null
+  const userInfo = JSON.parse(window.sessionStorage.getItem('userInfo') || 'null') || null
   return (
     <div className={styles.container}>
       <div className={styles.appIcon}>左</div>
