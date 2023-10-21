@@ -5,7 +5,7 @@
  */
 module.exports = app => {
   const { router, controller } = app;
-
+  const auth = app.middleware.auth();
   router.prefix('/api/v1'); // 设置基础路径
 
   // 用户注册
@@ -13,8 +13,7 @@ module.exports = app => {
   // 用户登录
   router.post('/user/login', controller.user.login);
 
-
   // 新建文章
-  router.post('/article/creation', controller.article.createFile);
+  router.post('/article/creation', auth, controller.article.createFile);
 
 };

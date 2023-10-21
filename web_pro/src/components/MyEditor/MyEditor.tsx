@@ -6,7 +6,7 @@ import uploadFile from '@/utils/up-oss'
 import { IDomEditor, IEditorConfig, IToolbarConfig } from '@wangeditor/editor'
 type InsertFnType = (url: string, alt: string, href: string) => void
 function MyEditor(props: any) {
-  const { getHtml, setValue, title } = props;
+  const { getHtml, setValue, title = '' } = props;
   // editor 实例
   const [editor, setEditor] = useState<IDomEditor | null>(null)   // TS 语法
   // const [editor, setEditor] = useState(null)                   // JS 语法
@@ -19,7 +19,8 @@ function MyEditor(props: any) {
   }, [title, setValue])
 
   const updateHtml = () => {
-    setHtml(title + setValue)
+    // setHtml(title + setValue)
+    editor?.dangerouslyInsertHtml(title + setValue)
   }
 
   // 工具栏配置

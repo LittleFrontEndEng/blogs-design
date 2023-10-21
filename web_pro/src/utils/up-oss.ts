@@ -17,6 +17,8 @@
 const OSS = require('ali-oss')
 
 const client = new OSS({
+  accessKeyId: 'LTAI5tNtCeJTwe8fMd63ax8q',
+  accessKeySecret: 'DR9y87cQVlJvwtzxxvbcN6ahZPbuKi',
   region: 'oss-cn-beijing',
   bucket: 'lsy-avatarbucket',
 })

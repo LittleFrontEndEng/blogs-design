@@ -11,9 +11,17 @@ module.exports = (options = { required: true }) => {
         ctx.user = await ctx.model.User.findById(data.userId);
       } catch (error) {
         ctx.throw(401);
+        // ctx.body = {
+        //   success: false,
+        //   errorCode: 401,
+        // };
       }
     } else if (options.required) {
       ctx.throw(401);
+      // ctx.body = {
+      //   success: false,
+      //   errorCode: 401,
+      // };
     }
 
     // next 执行后续
