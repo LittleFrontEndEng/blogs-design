@@ -15,5 +15,10 @@ module.exports = app => {
 
   // 新建文章
   router.post('/article/creation', auth, controller.article.createFile);
-
+  // 获取文章列表
+  router.post('/article/list', app.middleware.auth({ required: false }), controller.article.getArticle);
+  // 删除接口
+  router.delete('/article/del/:articleId', auth, controller.article.deleteArticle);
+  // 获取文章详情
+  router.get('/article/detail/:articleId', app.middleware.auth({ required: false }), controller.article.getArticleDetail);
 };

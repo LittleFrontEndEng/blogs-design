@@ -2,11 +2,124 @@
 </script>
 
 <template>
-  <div>
+  <div class="container">
     文章列表页
     <el-button type="primary">Primary</el-button>
+    <el-button type="primary">Primary</el-button>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+.container {
+  width: 70%;
+  background-color: #fff;
+}
 </style>
