@@ -29,7 +29,7 @@ const LayoutAside = (props: any) => {
     <div className={styles.container}>
       <Menu
         onClick={(e) => onClick(e)}
-        style={{ width: 256 }}
+        // style={{ width: 256 }}
         selectedKeys={[defaultRoute]}
         defaultOpenKeys={['sub1']}
         items={items}

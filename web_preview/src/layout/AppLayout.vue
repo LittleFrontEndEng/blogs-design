@@ -13,28 +13,27 @@
 
 <style lang="scss" scoped>
 .container {
-  width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: space-between;
-
-  .container_left, .container_right {
-    width: 300px;
+  position: relative;
+  .container_left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+  }
+  .container_right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 15%;
     height: 100%;
   }
 
   .content {
     flex: 1;
-    height: 100%;
-    margin: 0 16px;
-    background-color: purple;
-    overflow-y: scroll;
     display: flex;
     justify-content: center;
-    &::-webkit-scrollbar {
-      width: 0;
-      display: none;
-    }
   }
 }
 </style>
