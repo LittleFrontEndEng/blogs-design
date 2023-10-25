@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <div class="container_left">左</div>
-    <div class="content"><router-view/></div>
+    <div class="content">
+      <div class="box"><router-view/></div>
+      
+    </div>
     <div class="container_right">右</div>
   </div>
   <!-- 子路由出口 -->
@@ -34,6 +37,10 @@
     flex: 1;
     display: flex;
     justify-content: center;
+
+    .box {
+      width: 50%;
+    }
   }
 }
 </style>

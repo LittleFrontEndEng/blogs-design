@@ -1,12 +1,19 @@
 <script setup>
 import { getArticlesList } from '@/api/article'
 import { onMounted, ref } from 'vue';
+import { useRouter } from 'vue-router'
 const currentRef = ref(1);
 const pageSizeRef = ref(10);
 const listContent = ref([]);
+const router = useRouter();
 onMounted(() => {
   getList();
 })
+
+const checkArticle = (articleId) => {
+  debugger
+  router.push({ path: 'article', query: { articleId } })
+}
 
 const getList = async () => {
   const result = await getArticlesList({
@@ -23,7 +30,7 @@ const getList = async () => {
 <template>
   <div class="container">
     <div class="list" v-for="item in listContent" :key="item.id">
-      <div class="listItem" >
+      <div class="listItem" @click="checkArticle(item.id)">
         <div class="itemCover">
           <el-image style="width: 100px; height: 60px;" :src="item.cover" fit="fill" />
         </div>
@@ -44,7 +51,6 @@ const getList = async () => {
 
 <style lang="scss" scoped>
 .container {
-  width: 65%;
   background-color: #fff;
   padding: 16px;
   // background-color: skyblue;
