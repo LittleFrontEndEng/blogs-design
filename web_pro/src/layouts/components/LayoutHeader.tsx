@@ -6,13 +6,7 @@ const LayoutHeader = (props: any) => {
   console.log('头部信息', props);
 
   const userInfo = JSON.parse(window.sessionStorage.getItem('userInfo') || 'null') || null
-  useEffect(() => {
-    if (userInfo == null) {
-      history.push({
-        pathname: '/login',
-      })
-    }
-  }, [])
+
   return (
     <div className={styles.container}>
       <div className={styles.appIcon}>左</div>
