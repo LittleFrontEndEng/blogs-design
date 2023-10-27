@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
 import { signin, signup } from '@/api/login';
 import { history } from 'umi';
@@ -9,6 +9,11 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('123456');
   const [email, setEmail] = useState('123@1223.com');
+
+  useEffect(() => {
+    console.log('登录页面');
+    
+  }, [])
   // 用户注册
   const signupnew = async () => {
     const query: LoginSignUp = {

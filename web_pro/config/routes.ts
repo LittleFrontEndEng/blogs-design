@@ -1,5 +1,10 @@
 export default [
   {
+    path: '/login',
+    name: 'login',
+    component: '@/pages/Login/Login.tsx',
+  },
+  {
     path: '/',
     name: 'basicLayout',
     component: '@/layouts/index.tsx',
