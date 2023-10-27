@@ -1,6 +1,7 @@
 import axios from "axios";
 const request = axios.create({
-  baseURL: 'http://127.0.0.1:7001'
+  // baseURL: 'http://127.0.0.1:7001'
+  baseURL: 'https://www.lsy-indi.cn/'
 })
 
 // 添加请求拦截器
