@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import { useStore } from 'vuex'
 import AppLayout from '@/layout/AppLayout.vue'
 const routes = [
@@ -23,7 +23,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(), // web history模式
+  history: createWebHashHistory(), // web history模式
   routes
 })
 

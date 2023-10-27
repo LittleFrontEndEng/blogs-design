@@ -20,7 +20,7 @@ onMounted(() => {
 
 // 登录
 const jumptologin = () => {
-  router.push('/login');
+  // router.push('/login');
 }
 
 // 关闭弹窗

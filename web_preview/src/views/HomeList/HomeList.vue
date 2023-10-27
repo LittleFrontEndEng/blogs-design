@@ -11,7 +11,6 @@ onMounted(() => {
 })
 
 const checkArticle = (articleId) => {
-  debugger
   router.push({ path: 'article', query: { articleId } })
 }
 
