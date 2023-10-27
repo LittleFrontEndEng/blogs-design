@@ -16,7 +16,7 @@ export default [
         component: '@/pages/Article/Article.tsx',
       },
       {
-        path: '/article/createarticle',
+        path: '/createarticle',
         name: '创建文章',
         hide: true,
         component: '@/pages/Article/components/CreateArticle/CreateArticle.tsx',
