@@ -6,7 +6,7 @@ const Article = () => {
   // 跳转创建页
   const jumptoTarget = () => {
     history.push({
-      pathname: '/article/createarticle',
+      pathname: '/createarticle',
       // query: {
       //   a: 'b',
       // },
